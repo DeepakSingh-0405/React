@@ -1,0 +1,13 @@
+@import "tailwindcss";
+body{
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-color: black;
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  flex-direction: row;
+  background-image: url(https://images.pexels.com/photos/6964173/pexels-photo-6964173.jpeg);
+  background-size: cover;
+}
