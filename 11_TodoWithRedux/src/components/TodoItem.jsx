@@ -21,7 +21,7 @@ export default function TodoItem({ todo }) {
 
 
     return (
-        <div className="flex items-center justify-between p-3 bg-slate-900 text-white rounded-lg shadow-md shadow-black w-full mb-5"
+        <div className="flex items-center justify-between p-3 bg-slate-900 text-white rounded-lg shadow-md shadow-black max-w-full mb-5"
             key={todo.id}>
 
             <div className="flex items-center gap-3">
@@ -38,7 +38,7 @@ export default function TodoItem({ todo }) {
                             type="text"
                             value={editedText}
                             onChange={(e) => setEditedText(e.target.value)}
-                            className="border-b border-gray-400 focus:outline-none px-1 py-0.5"
+                            className=" focus:outline-none px-1 py-0.5 bg-slate-900 shadow-md shadow-black w-full"
                         />
                     </form>
                 ) : (
