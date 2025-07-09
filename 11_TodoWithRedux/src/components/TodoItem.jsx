@@ -21,7 +21,7 @@ export default function TodoItem({ todo }) {
 
 
     return (
-        <div className="flex items-center justify-between p-3 bg-white rounded-lg shadow w-full mb-5"
+        <div className="flex items-center justify-between p-3 bg-slate-900 text-white rounded-lg shadow-md shadow-black w-full mb-5"
             key={todo.id}>
 
             <div className="flex items-center gap-3">

@@ -16,7 +16,7 @@ export default function TodoForm() {
 
         <form
             onSubmit={handleSubmit}
-            className="flex items-center justify-center gap-2 p-4 bg-white shadow-md rounded-lg"
+            className="flex items-center justify-center gap-2 p-4 bg-slate-950 rounded-lg shadow-lg shadow-black"
         >
             <input
                 type="text"
