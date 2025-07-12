@@ -19,7 +19,6 @@ export default function TodoItem({ todo }) {
         setIsEditing(false)
     }
 
-
     return (
         <div className="flex items-center justify-between p-3 bg-slate-900 text-white rounded-lg shadow-md shadow-black max-w-full mb-5"
             key={todo.id}>
@@ -70,3 +69,4 @@ export default function TodoItem({ todo }) {
 
     )
 }
+

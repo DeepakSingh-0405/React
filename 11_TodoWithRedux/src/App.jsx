@@ -3,9 +3,9 @@ import { useSelector, Provider } from 'react-redux'
 import './App.css'
 import TodoForm from './components/TodoForm'
 import TodoItem from './components/TodoItem'
-import { store } from './Store/store'
-import Lottie from 'react-lottie-player'
-import animationData from './animation/lottie.json'
+import Particles from './Particles';
+
+
 function App() {
 
 
@@ -14,24 +14,35 @@ function App() {
 
 
   return (
-    <div className='bg-slate-950 flex flex-col items-center justify-center p-4 w-full shadow-lg shadow-black'>
+    <div>
 
-      <h1 className='font-bold text-5xl mb-3 text-center text-white'> MY TODOS </h1>
+      <div style={{ width: '100%', height: '600px', position: 'absolute', background: 'sticky', left: 0, top: 0 }}
+        >
+        <Particles
+          particleColors={['#ffffff', '#ffffff']}
+          particleCount={200}
+          particleSpread={10}
+          speed={0.1}
+          particleBaseSize={100}
+          moveParticlesOnHover={true}
+          alphaParticles={false}
+          disableRotation={false}
+        />
+      </div>
+      <div style={{ zIndex: '1', position: 'relative' }} className='flex flex-col items-center justify-center gap-5'>
 
-      <TodoForm />
-      <br /><br />
-      {todos.map(todo => (
-        <div key={todo.id} className='w-full'>
-          <TodoItem todo={todo} />
+        <h1 className='font-bold text-5xl mb-3 text-center text-white'> MY TODOS </h1>
+
+        <TodoForm />
+        <br /><br />
+        {todos.map(todo => (
+          <div key={todo.id} className='w-full'>
+            <TodoItem todo={todo} />
         </div>
       ))}
+      </div>
 
-      <Lottie
-        loop
-        animationData={animationData}
-        play
-        className='bottom-0 w-full left-0 right-0 relative'
-      />
+
     </div>
   )
 }
