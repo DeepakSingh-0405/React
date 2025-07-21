@@ -4,12 +4,15 @@ import './App.css'
 import TodoForm from './components/TodoForm'
 import TodoItem from './components/TodoItem'
 import Particles from './Particles';
+import store from './store/store'
 
 
 function App() {
 
 
-  const todos = useSelector(state => state.todos)
+  const todos = useSelector(state => state.todos.todos)
+  
+  // console.log(store.getState())
 
 
 
@@ -41,8 +44,6 @@ function App() {
         </div>
       ))}
       </div>
-
-
     </div>
   )
 }
